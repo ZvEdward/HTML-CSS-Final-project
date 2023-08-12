@@ -1,0 +1,495 @@
+body {
+    background-image: url(https://img.freepik.com/free-vector/elegant-abstract-gold-background-with-shiny-elements_23-2148827899.jpg);
+    background-size: cover;
+}
+
+
+nav {
+    display: flex;
+    position: fixed;
+    z-index: 90;
+    width: 100vw;
+    height: 70px;
+    top: 0;
+    left: 0;
+    background-color: #197149;
+}
+
+.logo {
+    position: fixed;
+    z-index: 91;
+    aspect-ratio: auto 562 / 286;
+    top: 0;
+    right: 0;
+    font-family: garamond;
+    font-size: 70px;
+    color: #a37e2c;
+    text-decoration: none;
+    height: 100px;
+    background-color: white;
+    border: solid black;
+    border-radius: 50%;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.left-nav {
+    display: flex;
+    height: 100%;
+}
+
+.btn {
+    width: 10vw;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.5s ease-in-out;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    background: #040f1600;
+    color: #f5f5f5;
+
+    position: relative;
+    margin-right: 10px;
+}
+
+
+.btn .icon {
+    position: absolute;
+    height: 40px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.btn .text {
+    transform: translateX(55px);
+}
+
+.btn:hover .icon {
+    width: 175px;
+}
+
+.btn:hover .text {
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active .icon {
+    transform: scale(0.85);
+}
+
+.menu {
+    position: absolute;
+    width: 200px;
+    top: 0;
+    left: 100%;
+
+    opacity: 0;
+}
+
+.menu-btn {
+    height: 100%;
+    width: 200px;
+    color: white;
+    background-image: url(https://img.freepik.com/free-photo/empty-save-texture-room-light_1258-175.jpg?w=1060&t=st=1691669134~exp=1691669734~hmac=5cbd4c6aceb9172d51df7f99f765cf9d62facafa2db014e73ae6ef15e8c85253);
+    display: block;
+    border: white solid 3px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.input {
+    max-width: 190px;
+    background-color: #f5f5f5;
+    color: #242424;
+    padding: 0.15rem 0.5rem;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input:focus {
+    border-bottom: 2px solid #5b5fc7;
+    border-radius: 4px 4px 2px 2px;
+}
+
+input:hover {
+    outline: 1px solid lightgrey;
+}
+
+.contact {
+    font-size: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn:hover .menu,
+.menu:hover {
+    opacity: 1;
+    transition: opacity 0.5s 0.25s;
+}
+
+.btn:hover {
+    margin-right: 200px;
+}
+
+.input {
+    max-width: 190px;
+    background-color: #f5f5f5;
+    color: #242424;
+    padding: 0.15rem 0.5rem;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
+}
+
+input:focus {
+    border-bottom: 2px solid #5b5fc7;
+    border-radius: 4px 4px 2px 2px;
+}
+
+input:hover {
+    outline: 1px solid lightgrey;
+}
+
+h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 100px;
+    text-align: center;
+
+    /* font-family: "Playfair Display SC", serif; */
+    color: black;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+    font-family: "Lucida Handwriting";
+
+    font-weight: bold;
+    width: 90vw;
+    /* height: auto; */
+    height: calc(94vh - 15vw - 100px);
+    font-size: 5vw;
+}
+
+h1 span {
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    display: inline-block;
+    font-size: 7vw;
+    text-decoration: underline;
+}
+
+.photo-ani {
+    display: block;
+    width: 33.3vw;
+    height: 15vw;
+    position: absolute;
+    animation-duration: 4s;
+    overflow: hidden;
+    pointer-events: auto;
+}
+
+.photo-ani img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+#watch {
+    animation-name: watch-ani;
+    top: calc(94vh - 15vw);
+    left: 50%;
+    transform: translateX(-150%);
+}
+
+@keyframes watch-ani {
+    0% {
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+    30% {
+        opacity: 1;
+        z-index: 99;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 99vw;
+        height: 99vh;
+        pointer-events: none;
+    }
+    40% {
+        opacity: 1;
+        z-index: 99;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70vw;
+        height: 70vh;
+        pointer-events: none;
+    }
+    70% {
+        top: calc(94vh - 15vw);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20vw;
+        height: 15vw;
+        pointer-events: none;
+    }
+    100% {
+        top: calc(94vh - 15vw);
+        left: 50%;
+        transform: translateX(-150%);
+        opacity: 1;
+        width: 33.3vw;
+        height: 15vw;
+        pointer-events: none;
+    }
+}
+
+#production {
+    animation-name: production-ani;
+    animation-delay: 8s;
+    top: calc(94vh - 15vw);
+    left: 50%;
+    transform: translateX(-50%);
+    animation-fill-mode: backwards;
+}
+
+@keyframes production-ani {
+    0% {
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+    30% {
+        opacity: 1;
+        z-index: 99;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 99vw;
+        height: 99vh;
+        pointer-events: none;
+    }
+    40% {
+        opacity: 1;
+        z-index: 99;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70vw;
+        height: 70vh;
+        pointer-events: none;
+    }
+    70% {
+        top: calc(94vh - 15vw);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20vw;
+        height: 15vw;
+        pointer-events: none;
+    }
+    100% {
+        top: calc(94vh - 15vw);
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+        width: 33.3vw;
+        height: 15vw;
+        pointer-events: none;
+    }
+}
+
+#store {
+    animation-name: store-ani;
+    animation-delay: 4s;
+    top: calc(94vh - 15vw);
+    left: 50%;
+    transform: translateX(50%);
+    animation-fill-mode: backwards;
+}
+
+@keyframes store-ani {
+    0% {
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+    30% {
+        opacity: 1;
+        z-index: 99;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 99vw;
+        height: 99vh;
+        pointer-events: none;
+    }
+    40% {
+        opacity: 1;
+        z-index: 99;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70vw;
+        height: 70vh;
+        pointer-events: none;
+    }
+    70% {
+        top: calc(94vh - 15vw);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20vw;
+        height: 15vw;
+    }
+    100% {
+        top: calc(94vh - 15vw);
+        left: 50%;
+        transform: translateX(50%);
+        opacity: 1;
+        width: 33.3vw;
+        height: 15vw;
+        pointer-events: none;
+    }
+}
+
+.photo-ani div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: black;
+    color: white;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.photo-ani:hover div {
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7;
+}
+
+.photo-ani:hover img {
+    transform: scale(1.5);
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6vh;
+    background-color: #197149;
+    color: white;
+    text-align: center;
+}
+
+.footer-contact {
+    border-top: solid black 1vh;
+}
+
+.footer-contact img {
+    text-align: center;
+    position: relative;
+    width: 5vh;
+    height: 5vh;
+}
+
+@media (max-width: 1250px) {
+
+    h1 {
+        margin-top: 100px;
+        font-weight: bold;
+        width: 90vw;
+        height: auto;
+        font-size: 7vh;
+    }
+
+    h1 span {
+        font-size: 9vh;
+    }
+    .photo-ani {
+        height: 25vw;
+    }
+    #watch {
+        top: calc(94vh - 25vw);
+    }
+
+    #production {
+        top: calc(94vh - 25vw);
+    }
+
+    #store {
+        top: calc(94vh - 25vw);
+    }
+
+    .nav-search {
+        display: none;
+    }
+    .nav-contact {
+        display: none;
+    }
+    .menu {
+        top: 100%;
+        left: 0;
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (max-width: 687px) {
+    .logo {
+        height: 65px;
+    }
+    #index-body{
+        overflow: hidden;
+        background-image: none;
+    }
+    .rotated-background-img::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vh;
+        height: 120vh;
+        background-image: url('https://img.freepik.com/free-vector/elegant-abstract-gold-background-with-shiny-elements_23-2148827899.jpg');
+        background-size: cover;
+        object-fit: fill;
+        transform: rotate(90deg);
+        z-index: -1;
+    }
+}
